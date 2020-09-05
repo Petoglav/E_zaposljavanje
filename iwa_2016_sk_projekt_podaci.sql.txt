@@ -1,0 +1,159 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+USE `iwa_2016_sk_projekt` ;
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Dumping data for table `tip_korisnika`
+--
+
+INSERT INTO `tip_korisnika` (`tip_id`, `naziv`) VALUES
+(0, 'administrator'),
+(1, 'voditelj'),
+(2, 'korisnik');
+
+
+--
+-- Dumping data for table `korisnik`
+--
+
+INSERT INTO `korisnik` (`korisnik_id`, `tip_id`, `korisnicko_ime`, `lozinka`, `ime`, `prezime`, `email`, `slika`) VALUES
+(1, 0, 'admin', 'foi', 'Administrator', 'Administrator', '', 'korisnici/admin.jpg'),
+
+(2, 1, 'voditelj', '123456', 'Voditelj', 'Voditelj', '', 'korisnici/admin.jpg'),
+
+(3, 2, 'pkos', '123456', 'Pero', 'Kos', 'pkos@fff.hr', 'korisnici/pkos.jpg'),
+(4, 2, 'vzec', '123456', 'Vladimir', 'Zec', 'vzec@fff.hr', 'korisnici/vzec.jpg'),
+(5, 2, 'qtarantino', '123456', 'Quentin', 'Tarantino', 'qtarantino@foi.hr', 'korisnici/qtarantino.jpg'),
+(6, 2, 'mbellucci', '123456', 'Monica', 'Bellucci', 'mbellucci@foi.hr', 'korisnici/mbellucci.jpg'),
+(7, 2, 'vmortensen', '123456', 'Viggo', 'Mortensen', 'vmortensen@foi.hr', 'korisnici/vmortensen.jpg'),
+(8, 2, 'jgarner', '123456', 'Jennifer', 'Garner', 'jgarner@foi.hr', 'korisnici/jgarner.jpg'),
+(9, 2, 'nportman', '123456', 'Natalie', 'Portman', 'nportman@foi.hr', 'korisnici/nportman.jpg'),
+(10, 2, 'dradcliffe', '123456', 'Daniel', 'Radcliffe', 'dradcliffe@foi.hr', 'korisnici/dradcliffe.jpg'),
+(11, 2, 'hberry', '123456', 'Halle', 'Berry', 'hberry@foi.hr', 'korisnici/hberry.jpg'),
+(12, 2, 'vdiesel', '123456', 'Vin', 'Diesel', 'vdiesel@foi.hr', 'korisnici/vdiesel.jpg'),
+(13, 2, 'ecuthbert', '123456', 'Elisha', 'Cuthbert', 'ecuthbert@foi.hr', 'korisnici/ecuthbert.jpg'),
+(14, 2, 'janiston', '123456', 'Jennifer', 'Aniston', 'janiston@foi.hr', 'korisnici/janiston.jpg'),
+(15, 2, 'ctheron', '123456', 'Charlize', 'Theron', 'ctheron@foi.hr', 'korisnici/ctheron.jpg'),
+(16, 2, 'nkidman', '123456', 'Nicole', 'Kidman', 'nkidman@foi.hr', 'korisnici/nkidman.jpg'),
+(17, 2, 'ewatson', '123456', 'Emma', 'Watson', 'ewatson@foi.hr', 'korisnici/ewatson.jpg'),
+
+(18, 1, 'kdunst', '123456', 'Kirsten', 'Dunst', 'kdunst@foi.hr', 'korisnici/kdunst.jpg'),
+
+(19, 2, 'sjohansson', '123456', 'Scarlett', 'Johansson', 'sjohansson@foi.hr', 'korisnici/sjohansson.jpg'),
+(20, 2, 'philton', '123456', 'Paris', 'Hilton', 'philton@foi.hr', 'korisnici/philton.jpg'),
+(21, 2, 'kbeckinsale', '123456', 'Kate', 'Beckinsale', 'kbeckinsale@foi.hr', 'korisnici/kbeckinsale.jpg'),
+(22, 2, 'tcruise', '123456', 'Tom', 'Cruise', 'tcruise@foi.hr', 'korisnici/tcruise.jpg'),
+(23, 2, 'hduff', '123456', 'Hilary', 'Duff', 'hduff@foi.hr', 'korisnici/hduff.jpg'),
+(24, 2, 'ajolie', '123456', 'Angelina', 'Jolie', 'ajolie@foi.hr', 'korisnici/ajolie.jpg'),
+(25, 2, 'kknightley', '123456', 'Keira', 'Knightley', 'kknightley@foi.hr', 'korisnici/kknightley.jpg'),
+(26, 2, 'obloom', '123456', 'Orlando', 'Bloom', 'obloom@foi.hr', 'korisnici/obloom.jpg'),
+(27, 2, 'llohan', '123456', 'Lindsay', 'Lohan', 'llohan@foi.hr', 'korisnici/llohan.jpg'),
+(28, 2, 'jdepp', '123456', 'Johnny', 'Depp', 'jdepp@foi.hr', 'korisnici/jdepp.jpg'),
+(29, 2, 'kreeves', '123456', 'Keanu', 'Reeves', 'kreeves@foi.hr', 'korisnici/kreeves.jpg'),
+
+(30, 1, 'thanks', '123456', 'Tom', 'Hanks', 'thanks@foi.hr', 'korisnici/thanks.jpg'),
+
+(31, 2, 'elongoria', '123456', 'Eva', 'Longoria', 'elongoria@foi.hr', 'korisnici/elongoria.jpg'),
+(32, 2, 'rde', '123456', 'Robert', 'De', 'rde@foi.hr', 'korisnici/rde.jpg'),
+(33, 2, 'jheder', '123456', 'Jon', 'Heder', 'jheder@foi.hr', 'korisnici/jheder.jpg'),
+(34, 2, 'rmcadams', '123456', 'Rachel', 'McAdams', 'rmcadams@foi.hr', 'korisnici/rmcadams.jpg'),
+(35, 2, 'cbale', '123456', 'Christian', 'Bale', 'cbale@foi.hr', 'korisnici/cbale.jpg'),
+
+(36, 1, 'jalba', '123456', 'Jessica', 'Alba', 'jalba@foi.hr', 'korisnici/jalba.jpg'),
+
+(37, 2, 'bpitt', '123456', 'Brad', 'Pitt', 'bpitt@foi.hr', 'korisnici/bpitt.jpg'),
+(43, 2, 'apacino', '123456', 'Al', 'Pacino', 'apacino@foi.hr', 'korisnici/apacino.jpg'),
+(44, 2, 'wsmith', '123456', 'Will', 'Smith', 'wsmith@foi.hr', 'korisnici/wsmith.jpg'),
+(45, 2, 'ncage', '123456', 'Nicolas', 'Cage', 'ncage@foi.hr', 'korisnici/ncage.jpg'),
+(46, 2, 'vanne', '123456', 'Vanessa', 'Anne', 'vanne@foi.hr', 'korisnici/vanne.jpg'),
+(47, 2, 'kheigl', '123456', 'Katherine', 'Heigl', 'kheigl@foi.hr', 'korisnici/kheigl.jpg'),
+(48, 2, 'gbutler', '123456', 'Gerard', 'Butler', 'gbutler@foi.hr', 'korisnici/gbutler.jpg'),
+(49, 2, 'jbiel', '123456', 'Jessica', 'Biel', 'jbiel@foi.hr', 'korisnici/jbiel.jpg'),
+(50, 2, 'ldicaprio', '123456', 'Leonardo', 'DiCaprio', 'ldicaprio@foi.hr', 'korisnici/ldicaprio.jpg'),
+(51, 2, 'mdamon', '123456', 'Matt', 'Damon', 'mdamon@foi.hr', 'korisnici/mdamon.jpg'),
+(52, 2, 'hpanettiere', '123456', 'Hayden', 'Panettiere', 'hpanettiere@foi.hr', 'korisnici/hpanettiere.jpg'),
+(53, 2, 'rreynolds', '123456', 'Ryan', 'Reynolds', 'rreynolds@foi.hr', 'korisnici/rreynolds.jpg'),
+(54, 2, 'jstatham', '123456', 'Jason', 'Statham', 'jstatham@foi.hr', 'korisnici/jstatham.jpg'),
+(55, 2, 'enorton', '123456', 'Edward', 'Norton', 'enorton@foi.hr', 'korisnici/enorton.jpg'),
+(56, 2, 'mwahlberg', '123456', 'Mark', 'Wahlberg', 'mwahlberg@foi.hr', 'korisnici/mwahlberg.jpg'),
+(57, 2, 'jmcavoy', '123456', 'James', 'McAvoy', 'jmcavoy@foi.hr', 'korisnici/jmcavoy.jpg'),
+(58, 2, 'epage', '123456', 'Ellen', 'Page', 'epage@foi.hr', 'korisnici/epage.jpg'),
+(59, 2, 'mcyrus', '123456', 'Miley', 'Cyrus', 'mcyrus@foi.hr', 'korisnici/mcyrus.jpg'),
+(60, 2, 'kstewart', '123456', 'Kristen', 'Stewart', 'kstewart@foi.hr', 'korisnici/kstewart.jpg'),
+(61, 2, 'mfox', '123456', 'Megan', 'Fox', 'mfox@foi.hr', 'korisnici/mfox.jpg'),
+(62, 2, 'slabeouf', '123456', 'Shia', 'LaBeouf', 'slabeouf@foi.hr', 'korisnici/slabeouf.jpg'),
+(63, 2, 'ceastwood', '123456', 'Clint', 'Eastwood', 'ceastwood@foi.hr', 'korisnici/ceastwood.jpg'),
+(64, 2, 'srogen', '123456', 'Seth', 'Rogen', 'srogen@foi.hr', 'korisnici/srogen.jpg'),
+(65, 2, 'nreed', '123456', 'Nikki', 'Reed', 'nreed@foi.hr', 'korisnici/nreed.jpg'),
+(66, 2, 'agreene', '123456', 'Ashley', 'Greene', 'agreene@foi.hr', 'korisnici/agreene.jpg'),
+(67, 2, 'zdeschanel', '123456', 'Zooey', 'Deschanel', 'zdeschanel@foi.hr', 'korisnici/zdeschanel.jpg'),
+(68, 2, 'dfanning', '123456', 'Dakota', 'Fanning', 'dfanning@foi.hr', 'korisnici/dfanning.jpg'),
+(69, 2, 'tlautner', '123456', 'Taylor', 'Lautner', 'tlautner@foi.hr', 'korisnici/tlautner.jpg'),
+(70, 2, 'rpattinson', '123456', 'Robert', 'Pattinson', 'rpattinson@foi.hr', 'korisnici/rpattinson.jpg');
+
+
+INSERT INTO `zavod` (`zavod_id`, `moderator_id`, `naziv`, `opis`) VALUES
+(1, 2, 'DIREKTORI, MENADŽERI I ČELNICI', 'Direktori, menadžeri i čelnici'),
+(2, 2, 'INFORMATIKA I TEHNIČKE ZNANOSTI', 'Stručnjaci iz područja informatike i tehničkih znanosti'),
+(3, 2, 'ZDRAVSTVO, PRIRODOSLOVLJE I BIOTEHNIKA', 'Zdravstveni, prirodoslovni i biotehnički stručnjaci'),
+(4, 2, 'PROFESORI, NASTAVNICI I STRUČNJACI ZA OBRAZOVANJE', 'Profesori, nastavnici i stručnjaci za obrazovanje'),
+(5, 18, 'UREDSKI I ŠALTERSKI SLUŽBENICI', 'Uredski i šalterski službenici'),
+(6, 18, 'USLUŽNA I UGOSTITELJSKA ZANIMANJA', 'Uslužna i ugostiteljska zanimanja'),
+(7, 30, 'TRGOVAČKA I SRODNA ZANIMANJA', 'Trgovačka i srodna zanimanja'),
+(8, 30, 'GRAĐEVINSKA I RUDARSKA ZANIMANJA', 'Građevinska i rudarska zanimanja'),
+(9, 36, 'JEDNOSTAVNA PRODAJNA I USLUŽNA ZANIMANJA', 'Jednostavna prodajna i uslužna zanimanja');
+
+INSERT INTO `natjecaj` (`natjecaj_id`, `zavod_id`, `naziv`, `datum_kreiranja`, `vrijeme_kreiranja`, `datum_isteka`,`vrijeme_isteka`,`broj_radnih_mjesta`,`kratica_zupanije`,`opis`) VALUES
+(1,1,'RAVNATELJ/ICA GRADSKOG MUZEJA','2016-07-07', '12:00:00','2016-08-07','12:00:00', 1,'BBŽ','Traži se ravnatelj/ica gradskog muzeja na području Bjelovarsko-bilogorska županija. Potrebna zvanja: arheologija, povijest, etnologija, muzeologija, arheologija povijest umjetnosti. Razina obrazovanja: Fakultet, akademija, magisterij, doktorat. Radno iskustvo: 5 godina.'),
+(2,1,'RAVNATELJ/ICA VRTIĆA','2016-07-08', '12:00:00','2016-08-08','12:00:00', 1,'BPŽ','Traži se ravnatelj/ica vrtića na području Brodsko-posavske županije. Razina obrazovanja: Viša ili prvostupanjska, fakultet, akademija, magisterij, doktorat. Radno iskustvo: 5 godina. Ostale informacije: Na temelju članka 40.i 41. Zakona o ustanovama (NN br. 76/93, 29/97.,47/99, 35/08) , čl. 37. st.2 . Zakona o predškolskom odgoju i obrazovanju (NN br. 10/97, 107/07, 94/13) i članka 43.'),
+(3,1,'RAVNATELJ/RAVNATELJICA ŠKOLE','2016-07-09', '12:00:00','2016-08-09','12:00:00', 1,'DNŽ','Traži se ravnatelj/ica škole na području Dubrovačko-neretvanske županije. Razina obrazovanja: Fakultet, akademija, magisterij, doktorat. Strani jezici: češki jezik. Stručni ispiti: Potreban položen stručni ispit;. Radno iskustvo: 8 godina. Ostale informacije: Na temelju članka 126. i 127. Zakona o odgoju i obrazovanju u osnovnoj i srednjoj školi (Narodne novine, broj 87/08., 86/09., 92/10., 105/10., 90/11., 16/12., 86/12., 94/13. i 152/14.) i članka 61.'),
+(4,2,'TEHNOLOG/ICA','2016-07-30', '12:00:00','2016-08-30','12:00:00', 3,'KKŽ','Traži se tehnolog/ica na području Koprivničko-križevačke županije. Razina obrazovanja: Fakultet, akademija, magisterij, doktorat. Strani jezici: Engleski jezik. Ostale informacije: Kontrola i praćenje proizvodnje šećernih dekoracija.'),
+(5,2,'INFORMATIČAR/KA','2016-08-08', '12:00:00','2016-09-08','12:00:00', 2,'KZŽ','Traži se informatičar/ka na području Krapinsko-zagorske županije. Razina obrazovanja: Srednja škola 4 godine, viša ili prvostupanjska, fakultet, akademija, magisterij, doktorat. Radno iskustvo: Nije važno. Ostale informacije: Opis poslova: programiranje, održavanje računala. Mogućnost korištenja mjera aktivne politike zapošljavanja.'),
+(6,2,'PROJEKTANT/ICA','2016-08-09', '12:00:00','2016-09-09','12:00:00', 2,'LSŽ','Traži se projektant/ica na području Ličko-senjske županije. Razina obrazovanja: Fakultet, akademija, magisterij, doktorat. Ostale informacije: Opis poslova: Izrada idejnih i glavnih projekata arhitekture.'),
+(7,3,'DOKTOR/ICA MEDICINE','2016-08-10', '12:00:00','2016-09-10','12:00:00', 1,'OBŽ','Traži se doktor/ica medicine na području Osječko-baranjske županije. Razina obrazovanja: Fakultet, akademija, magisterij, doktorat. Stručni ispiti: Potreban položen stručni ispit; stručni ispit za doktora medicine. Radno iskustvo: Traži se pripravnik.'),
+(8,4,'UČITELJ/ICA RAZREDNE NASTAVE','2016-08-11', '12:00:00','2016-09-11','12:00:00', 2,'PSŽ','Traži se učitelj/ica razredne nastave na području Požeško-slavonske županije. Razina obrazovanja: Fakultet, akademija, magisterij, doktorat. Radno iskustvo: Nije važno. Ostale informacije: Na temelju članka 107. Zakona o odgoju i obrazovanju u osnovnoj i srednjoj školi (NN 87/08, 86/09, 92/10, 105/10, 90/11, 5/12, 16/12, 86/12, 126/12, 94/13, 152/14).'),
+(9,5,'ADMINISTRATOR/ICA ','2016-09-09', '12:00:00','2016-10-09','12:00:00', 1,'PGŽ','Traži se administrator/ica na području Primorsko-goranske županije. Ostale informacije: Opis poslova: administrativni poslovi, materijalno knjigovodstvo, vođenje blagajne. Uvjeti: SSS ekonomskog smjera, napredno poznavanje rada na osobnom računalu. Radno iskustvo poželjno ali nije uvijet.'),
+(10,6,'KONOBAR/ICA','2016-09-10', '12:00:00','2016-10-10','12:00:00', 2,'SMŽ','Traži se konobar/ica na području Sisačko-moslavačke županije. Razina obrazovanja: Srednja škola 3 godine. Poželjno radno iskustvo od minimalno godinu dana.'),
+(11,7,'PRODAVAČ/ICA','2016-09-11', '12:00:00','2016-10-11','12:00:00', 1,'SMŽ','Traži se prodavač/ica na području Sisačko-moslavačke županije. Ostale informacije: rad u otkupnom uredu, mjenjački poslovi. Radno iskustvo poželjno ali nije uvijet.'),
+(12,8,'GRAĐEVINSKI RADNIK/ICA','2016-09-12', '12:00:00','2016-10-12','12:00:00', 1,'SMŽ','Traži se građevniski radnik/ica na području Sisačko-moslavačke županije. Mjesto rada: Sisak i okolica. U obzir dolaze kandidati: PKV/KV zidar, tesar, fasader, krovopokrivač. Radno iskustvo poželjno ali nije uvijet.'),
+(13,9,'DOSTAVLJAČ/ICA','2016-09-30', '12:00:00','2016-10-30','12:00:00', 1,'BBŽ','Traži se dostavljač novina na području Bjelovarsko-bilogorska županija. Radno iskustvo poželjno ali nije uvijet.');
+
+INSERT INTO `pristupnik` (`korisnik_id`, `natjecaj_id`, `status`, `slika`, `video`) VALUES
+(3, 1,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(4, 2,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(5, 3,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(6, 4,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(7, 4,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(8, 4,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(9, 4,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(10, 4,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(11, 5,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(12, 5,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(13, 5,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(14, 5,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(15, 5,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(16, 5,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(17, 5,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(19, 5,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(20, 6,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(21, 6,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(22, 7,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(23, 8,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(24, 8,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(25, 8,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(26, 9,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(27, 10,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(28, 10,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png',''),
+(29, 11,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(31, 12,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(32, 13,'P','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','https://www.html5rocks.com/en/tutorials/track/basics/treeOfLife/video/developerStories-en.webm'),
+(3, 8,'Z','https://cdn3.iconfinder.com/data/icons/humano2/128x128/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png','');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

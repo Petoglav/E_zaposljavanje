@@ -1,0 +1,118 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema iwa_2016_sk_projekt
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema iwa_2016_sk_projekt
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `iwa_2016_sk_projekt` DEFAULT CHARACTER SET utf8 ;
+USE `iwa_2016_sk_projekt` ;
+
+-- -----------------------------------------------------
+-- Table `iwa_2016_sk_projekt`.`tip_korisnika`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `iwa_2016_sk_projekt`.`tip_korisnika` (
+  `tip_id` INT(10) NOT NULL AUTO_INCREMENT,
+  `naziv` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`tip_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `iwa_2016_sk_projekt`.`korisnik`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `iwa_2016_sk_projekt`.`korisnik` (
+  `korisnik_id` INT(10) NOT NULL AUTO_INCREMENT,
+  `tip_id` INT(10) NOT NULL,
+  `korisnicko_ime` VARCHAR(50) NOT NULL,
+  `lozinka` VARCHAR(50) NOT NULL,
+  `ime` VARCHAR(50) NOT NULL,
+  `prezime` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(50) NULL,
+  `slika` VARCHAR(200) NULL,
+  PRIMARY KEY (`korisnik_id`),
+  INDEX `fk_korisnik_tip_korisnika_idx` (`tip_id` ASC),
+  CONSTRAINT `fk_korisnik_tip_korisnika`
+    FOREIGN KEY (`tip_id`)
+    REFERENCES `iwa_2016_sk_projekt`.`tip_korisnika` (`tip_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `iwa_2016_sk_projekt`.`zavod`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `iwa_2016_sk_projekt`.`zavod` (
+  `zavod_id` INT(10) NOT NULL AUTO_INCREMENT,
+  `moderator_id` INT(10) NOT NULL,
+  `naziv` VARCHAR(50) NOT NULL,
+  `opis` TEXT NULL,
+  PRIMARY KEY (`zavod_id`),
+  INDEX `fk_zavod_moderator_idx` (`moderator_id` ASC),
+  CONSTRAINT `fk_zavod_moderator`
+    FOREIGN KEY (`moderator_id`)
+    REFERENCES `iwa_2016_sk_projekt`.`korisnik` (`korisnik_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `iwa_2016_sk_projekt`.`natjecaj`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `iwa_2016_sk_projekt`.`natjecaj` (
+  `natjecaj_id` INT(10) NOT NULL AUTO_INCREMENT,
+  `zavod_id` INT(10) NOT NULL,
+  `naziv` VARCHAR(50) NOT NULL,
+  `datum_kreiranja` DATE NOT NULL,
+  `vrijeme_kreiranja` TIME NOT NULL,
+  `datum_isteka` DATE NOT NULL,
+  `vrijeme_isteka` TIME NOT NULL,
+  `broj_radnih_mjesta` INT(2) NOT NULL,
+  `kratica_zupanije` CHAR(3) NOT NULL,
+  `opis` TEXT NULL,
+  PRIMARY KEY (`natjecaj_id`),
+  INDEX `fk_natjecaj_zavod_idx` (`zavod_id` ASC),
+  CONSTRAINT `fk_natjecaj_zavod`
+    FOREIGN KEY (`zavod_id`)
+    REFERENCES `iwa_2016_sk_projekt`.`zavod` (`zavod_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `iwa_2016_sk_projekt`.`pristupnik`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `iwa_2016_sk_projekt`.`pristupnik` (
+  `korisnik_id` INT(10) NOT NULL,
+  `natjecaj_id` INT(10) NOT NULL,
+  `status` CHAR(1) NOT NULL,
+  `slika` VARCHAR(200) NOT NULL,
+  `video` VARCHAR(200) NULL,
+  INDEX `fk_pristupnik_natjecaj_idx` (`natjecaj_id` ASC),
+  INDEX `fk_pristupnik_korisnik_idx` (`korisnik_id` ASC),
+  CONSTRAINT `fk_pristupnik_korisnik`
+    FOREIGN KEY (`korisnik_id`)
+    REFERENCES `iwa_2016_sk_projekt`.`korisnik` (`korisnik_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pristupnik_natjecaj`
+    FOREIGN KEY (`natjecaj_id`)
+    REFERENCES `iwa_2016_sk_projekt`.`natjecaj` (`natjecaj_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE USER 'iwa_2016'@'localhost' IDENTIFIED BY 'foi2016';
+
+GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE `iwa_2016_sk_projekt`.* TO 'iwa_2016'@'localhost';
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

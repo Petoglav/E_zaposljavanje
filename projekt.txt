@@ -1,0 +1,21 @@
+oge: administrator, moderator, registrirani korisnik i anonimni/neprijavljeni korisnici
+
+Sustav treba omogućiti komunikaciju između zavoda za zapošljavanje i korisnika. Sustav mora imati mogućnost prijave i odjave korisnika sa sustava. U sustavu postoji jedan ugrađeni administrator (korisničko ime: admin, lozinka: foi). Administrator je prijavljeni korisnik koji ima vrstu jednaku nula.
+
+Sustav obavezno sadrži stranicu o_autoru.html (poveznica na stranicu mora biti u zaglavlju svake stranice)  u kojoj se nalaze osobni podaci autora (svi podaci su obavezni): ime, prezime, broj indeksa, mail (obavezno FOI mail), centar, godina (akademska godina prvog upisa kolegija IWA) i slika jpg formata veličine 300x400px (npr. kao na osobnoj iskaznici ili indeksu).
+
+Anonimni/neregistrirani korisnik vidi popis zavoda i odabirom zavoda vidi opće podatke o zavodu (naziv i opis) te popis natječaja odabranog zavoda (samo zatvorene). Klikom na zatvoreni natječaj vidi podatke, sliku i video (ako je priložen) pristupnika koji su zaposleni na to radno mjesto.
+
+Registrirani korisnik uz svoje funkcionalnosti ima i sve funkcionalnosti kao i neprijavljeni korisnik. Također vidi popis otvorenih natječaja sortirano po datumu isteka grupirano po zavodu. Klikom na natječaj dobiva podatke o natječaju zajedno s popisom trenutnih pristupnika koji su se javili te se može prijaviti na isti. Kod prijave na natječaj pristupnik mora unijeti url do slike na webu (slika pristupnika), a opcionalno može staviti i url do nekog videa na webu (video vlastitog predstavljanja) i također se u tablicu pristupnik automatski upisuje status zahtjev poslan (Z).
+
+Moderator uz svoje funkcionalnosti ima i sve funkcionalnosti kao i registrirani korisnik te uz to može, dodavati, pregledavati i ažurirati natječaje svog zavoda (npr. Informatičar/ka, …). Prilikom unosa/ažuriranja natječaja mora definirati naziv natječaja, broj radnih mjesta, datum i vrijeme kreiranja natječaja, kraticu županije (npr. SMŽ, …) te opcionalno opis natječaja gdje je datum i vrijeme isteka 30 dana od kreiranja istog (automatski se izračunava). Moderator nakon prijave vidi popis natječaja koje je kreirao sortirano po datumu isteka natječaja. Odabirom natječaja vidi popis prijavljenih pristupnika. Po završetku natječaja odabire pristupnike koji su zaposleni na natječaj, a to se obavlja ažuriranjem statusa tablice pristupnik u prihvaćen (P). Može vidjeti broj zaposlenih osoba u odabranom razdoblju i rang listu korisnika s najvećim brojem prijava u odabranom razdoblju.
+
+Administrator uz svoje funkcionalnosti ima i sve funkcionalnosti kao i moderator zavoda. Administrator unosi, ažurira i pregledava korisnike sustava te definira i ažurira njihove tipove. Administrator unosi, pregledava i ažurira zavod (npr. Informatika, …) i bira moderatora za pojedini zavod između korisnika koji imaju tip moderator. Jedan moderator može biti zadužen za više zavoda. Kod unosa zavoda mora unijeti naziv i opis zavoda. Može pregledavati sve natječaje uz filtriranje i sortiranje na bazi kratice županije i naziva zavoda.
+
+Napomena: Svi datumi moraju se unositi od strane korisnika u formatu „dd.mm.gggg“ a vrijeme u obliku „hh:mm:ss“ ne koristeći date i time html tip za input element.
+
+Baza podataka naziva se iwa_2016_sk_projekt. Korisnik za pristup do baze podataka naziva se iwa_2016 a lozinka je foi2016. Kod izrade projektnog rješenja treba se točno držati uputa i NE SMIJE se mijenjati (naziv baze podataka, struktura tablica, korisnik i lozinka).
+
+Završeno rješenje projektnog zadatka treba poslati kroz sustav za predaju rješenja nakon čega slijedi obavijest i dogovor o obrani projekta. Obrana projektnog rješenja se obavlja na računalu i bazi podataka nastavnika.
+
+Projekti ne smiju sadržavati u programskom kodu komentare!

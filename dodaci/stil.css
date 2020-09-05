@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #f1f1f1;
+  overflow: auto;
+  position: sticky;
+  float: left;
+  height: 100%;
+}
+
+li a.menu {
+  display: block;
+  color: #000000;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+li a.menu.prijava {
+  text-decoration: underline;
+}
+
+li a.menu:hover {
+  background-color: teal;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input[type='submit'] {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #d5d5d5;
+  font-size: 20px;
+  padding: 8px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='password'],
+select {
+  width: 250px;
+  border: 1px solid #d5d5d5;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+textarea {
+  width: 350px;
+  padding: 8px;
+  border: 1px solid #d5d5d5;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  border: 3px solid #d5d5d5;
+  padding: 7px;
+}
+
+a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: teal;
+}
+a:visited {
+  color: teal;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: teal;
+}
+
+.centar {
+  text-align: center;
+}
+
+.naslov {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+
+.polje {
+  font-weight: bold;
+  width: 210px;
+  display: inline-block;
+}
+
+.error {
+  color: crimson;
+}
+
+#zaglavlje {
+  background-color: teal;
+  color: white;
+}
+
+#stranica {
+  background-color: white;
+  margin-left: 20%;
+  padding: 15px;
+}
+
+#podnozje {
+  background-color: #c1c1c1;
+  margin-left: 20%;
+  padding: 15px;
+}
